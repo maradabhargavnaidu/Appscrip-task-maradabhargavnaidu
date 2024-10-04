@@ -6,7 +6,7 @@ import ArrowUp from "@/app/icons/ArrowUp";
 const Products = () => {
   const [isOpen, setisOpen] = useState(false);
   const [products, setProducts] = useState([]);
-  const [sideNav, setSideNav] = useState(false);
+  const [sideNav, setSideNav] = useState(true);
   const [filters, setFilters] = useState({
     men: false,
     women: false,
