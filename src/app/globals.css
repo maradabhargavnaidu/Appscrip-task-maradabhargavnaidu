@@ -13,6 +13,14 @@
   gap: 6rem;
   justify-content: center;
 }
+.subbtn {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: white solid 2px;
+  border-radius: 8px;
+  font-weight: bold;
+}
 .nav-right-items-desk {
   display: flex;
   gap: 1rem;
@@ -97,6 +105,16 @@
 .dropdown-content {
   padding: 10px 1px;
 }
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-top-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 95%;
@@ -117,7 +135,7 @@
     display: none;
   }
   .grid-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-top {
     flex-direction: column;
