@@ -5,6 +5,7 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px 10px;
 }
 .mini-nav {
@@ -12,9 +13,12 @@
   gap: 6rem;
   justify-content: center;
 }
-.nav-right-items {
+.nav-right-items-desk {
   display: flex;
   gap: 1rem;
+}
+.nav-right-items-mob {
+  display: none;
 }
 .container {
   width: 100%;
@@ -129,6 +133,12 @@
     height: 100%;
     /* width: 100%; */
     padding: 10px 10px;
+  }
+  .nav-right-items-desk {
+    display: none;
+  }
+  .nav-right-items-mob {
+    display: block;
   }
 }
 
