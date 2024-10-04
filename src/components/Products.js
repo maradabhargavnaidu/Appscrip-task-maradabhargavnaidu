@@ -6,6 +6,7 @@ import ArrowUp from "@/app/icons/ArrowUp";
 const Products = () => {
   const [isOpen, setisOpen] = useState(false);
   const [products, setProducts] = useState([]);
+  const [sideNav, setSideNav] = useState(false);
   const [filters, setFilters] = useState({
     men: false,
     women: false,
@@ -87,9 +88,18 @@ const Products = () => {
   return (
     <div className="container">
       <nav className="products-nav">
-        <div className="flex">
+        <div className="flex" style={{ alignItems: "center" }}>
           <div>{products.length}</div>
-          <p>HIDE FILTER</p>
+          <p
+            onClick={() => setSideNav(!sideNav)}
+            style={{
+              cursor: "pointer",
+              textDecoration: "underline",
+              fontSize: "14px",
+            }}
+          >
+            {sideNav ? "SHOW FILTER" : "HIDE FILTER"}
+          </p>
         </div>
 
         <select
@@ -104,7 +114,7 @@ const Products = () => {
       </nav>
 
       <div className="flex">
-        <div className="products-side-nav">
+        <div className={"products-side-nav " + (sideNav ? "none" : "")}>
           <div className="dropdown">
             <button className="dropbtn" onClick={dropdownOpen}>
               Select Categories {isOpen ? <ArrowUp /> : <ArrowDown />}

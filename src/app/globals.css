@@ -81,6 +81,9 @@
   align-items: center;
   cursor: pointer;
 }
+.none {
+  display: none;
+}
 .products-nav-dropdown {
   background-color: white;
   border: none;
@@ -109,9 +112,6 @@
   .mini-nav {
     display: none;
   }
-  .products-side-nav {
-    display: none;
-  }
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -122,6 +122,13 @@
   .footer-down {
     flex-direction: column;
     gap: 2rem;
+  }
+  .products-side-nav {
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    /* width: 100%; */
+    padding: 10px 10px;
   }
 }
 
